@@ -69,6 +69,10 @@ const newRestaurant = {
 	FoundedIn: 2000
 };
 console.log(newRestaurant);
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
 /*Destructing Object
 ///////////////////////////////////// 
 restaurant.orderDelivery({
