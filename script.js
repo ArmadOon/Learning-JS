@@ -29,6 +29,9 @@ const restaurant = {
 		}
 	}
 };
+
+/*Destructing Object
+///////////////////////////////////// 
 restaurant.orderDelivery({
 	time: '22:30',
 	adress: 'Via del Sole, 21',
@@ -63,7 +66,7 @@ const {
 	fri: { open, close }
 } = openingHours;
 console.log(open, close);
-
+ */
 // const arr = [2, 3, 6];
 // //destructuring assigment
 // const [x, y, z] = arr;
