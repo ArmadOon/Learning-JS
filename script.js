@@ -14,6 +14,11 @@ const restaurant = {
 			`Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time}`
 		);
 	},
+	orederPasta: function (ing1, ing2, ing3) {
+		console.log(
+			`Here is your delicious pasta with ${ing1} and ${ing2} and ${ing3}`
+		);
+	},
 	openingHours: {
 		thu: {
 			open: 12,
@@ -41,6 +46,21 @@ const mainMenuCopy = [...restaurant.mainMenu];
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
+
+// Iterables are : Arrays, Strings, maps, sets but NOT OBJECTS!!
+
+const str = 'jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+console.log(...str);
+
+const ingredients = [
+	prompt("Let's make pasta! Ingredient 1 ?"),
+	prompt('Ingredient2?'),
+	prompt('Ingredient 3?')
+];
+console.log(ingredients);
+restaurant.orederPasta(...ingredients);
 /*Destructing Object
 ///////////////////////////////////// 
 restaurant.orderDelivery({
