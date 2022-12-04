@@ -46,3 +46,10 @@ console.log(i, j);
  */
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
+
+// Default values
+const [p, q, r] = [8, 9];
+console.log(p, q, r); // r is undefined
+
+const [o = 1, l = 2, m = 5] = [8, 9]; //default values
+console.log(o, l, m);
