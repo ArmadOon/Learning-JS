@@ -31,7 +31,7 @@ const restaurant = {
 };
 // Spread operator
 const arr = [7, 8, 9];
-const newArr = [1, 2, 3, 4, 5, 6, ...arr];
+const newArr = [1, 2, 3, 4, 5, 6, ...arr]; //* if spread op. is not included, whole new arr is added [1,2,[1,2]]
 console.log(newArr);
 
 /*Destructing Object
