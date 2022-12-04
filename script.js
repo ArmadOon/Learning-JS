@@ -29,6 +29,10 @@ const restaurant = {
 		}
 	}
 };
+// Spread operator
+const arr = [7, 8, 9];
+const newArr = [1, 2, 3, 4, 5, 6, ...arr];
+console.log(newArr);
 
 /*Destructing Object
 ///////////////////////////////////// 
