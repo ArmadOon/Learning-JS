@@ -54,13 +54,21 @@ const letters = [...str, '', 'S.'];
 console.log(letters);
 console.log(...str);
 
-const ingredients = [
+/* const ingredients = [
 	prompt("Let's make pasta! Ingredient 1 ?"),
 	prompt('Ingredient2?'),
 	prompt('Ingredient 3?')
-];
-console.log(ingredients);
-restaurant.orederPasta(...ingredients);
+]; */
+//console.log(ingredients);
+
+//!ES6 spread operator works on objects
+
+const newRestaurant = {
+	...restaurant,
+	founder: 'Martin Pluhar',
+	FoundedIn: 2000
+};
+console.log(newRestaurant);
 /*Destructing Object
 ///////////////////////////////////// 
 restaurant.orderDelivery({
