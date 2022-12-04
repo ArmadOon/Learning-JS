@@ -9,6 +9,11 @@ const restaurant = {
 	order: function (starterIndex, mainIndex) {
 		return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 	},
+	orderDelivery: function ({ starterIndex, mainIndex, time, adress }) {
+		console.log(
+			`Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time}`
+		);
+	},
 	openingHours: {
 		thu: {
 			open: 12,
@@ -24,7 +29,12 @@ const restaurant = {
 		}
 	}
 };
-
+restaurant.orderDelivery({
+	time: '22:30',
+	adress: 'Via del Sole, 21',
+	mainIndex: 2,
+	starterIndex: 2
+});
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
@@ -37,6 +47,22 @@ console.log(restaurantName, hours, tags);
 
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
+// Mutating variables
+
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+// ! {a,b} = obj, if start with curly brackets expected code block need to wrap it with parentheses
+
+({ a, b } = obj);
+console.log(a, b);
+
+//* Nested Objects
+
+const {
+	fri: { open, close }
+} = openingHours;
+console.log(open, close);
 
 // const arr = [2, 3, 6];
 // //destructuring assigment
