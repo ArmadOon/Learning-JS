@@ -33,7 +33,7 @@ console.log(martin.__proto__); */
 // }
 
 // * class declaration
-/* class PersonCl {
+class PersonCl {
 	constructor(firstName, birthYear) {
 		this.firstName = firstName;
 		this.birthYear = birthYear;
@@ -49,7 +49,7 @@ console.log(martin.__proto__); */
 const jessica = new PersonCl('jessica', 1993);
 console.log(jessica);
 jessica.calcAge();
-jessica.greet(); */
+jessica.greet();
 
 // ! 1. Classes are NOT hoisted
 // ! 2. Class are first-class citizes
@@ -72,3 +72,21 @@ const account = {
 console.log(account.latest);
 account.latest = 50;
 console.log(account.movements);
+
+class StudentCl extends PersonCl {
+	constructor(firstName, birthYear, course) {
+		// ! Always need to happen first!
+		super(firstName, birthYear);
+		this.course = course;
+	}
+	introduce() {
+		console.log(
+			`Hello my name is ${this.firstName} and i study ${this.course}`
+		);
+	}
+}
+
+const martha = new StudentCl('Martha Jones', 2012, 'computer science');
+
+console.log(martha);
+martha.introduce();
