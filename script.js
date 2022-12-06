@@ -4,7 +4,7 @@
 
 //* Constructor function and new operator
 
-const Person = function (firstName, birthYear) {
+/* const Person = function (firstName, birthYear) {
 	this.firstName = firstName;
 	this.birthYear = birthYear;
 };
@@ -24,7 +24,7 @@ Person.prototype.calcAge = function () {
 
 martin.calcAge();
 
-console.log(martin.__proto__);
+console.log(martin.__proto__); */
 
 // ! ES6 classes
 // * class expression
@@ -33,7 +33,7 @@ console.log(martin.__proto__);
 // }
 
 // * class declaration
-class PersonCl {
+/* class PersonCl {
 	constructor(firstName, birthYear) {
 		this.firstName = firstName;
 		this.birthYear = birthYear;
@@ -49,8 +49,26 @@ class PersonCl {
 const jessica = new PersonCl('jessica', 1993);
 console.log(jessica);
 jessica.calcAge();
-jessica.greet();
+jessica.greet(); */
 
 // ! 1. Classes are NOT hoisted
 // ! 2. Class are first-class citizes
 // ! 3. Classes are executed in strict mode
+
+// ! SETTERS ANG GETTERS
+
+const account = {
+	owner: 'Martin',
+	movements: [200, 530, 120, 300],
+
+	get latest() {
+		return this.movements.slice(-1).pop();
+	},
+	set latest(mov) {
+		this.movements.push(mov);
+	}
+};
+
+console.log(account.latest);
+account.latest = 50;
+console.log(account.movements);
